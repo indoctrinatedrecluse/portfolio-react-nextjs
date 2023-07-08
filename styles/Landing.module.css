@@ -1,5 +1,57 @@
 .main {
+    margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #f5f5f5;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Make this content stick to left side of screen */
+.left {
+    flex: 1;
+    align-items: center;
+    align-content: center;
+}
+
+/* Make this content stick to right side of screen */
+.right {
+    flex: 2;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding-right: 30px;
+}
+
+.landing_img {
+    width: 120px;
+    height: 120px;
+}
+
+.landing_img:hover {
+    width: 150px;
+    height: 150px;
+}
+
+.landing_img:active {
+    width: 135px;
+    height: 135px;
+}
+
+.landing_img:focus {
+    width: 130px;
+    height: 130px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    text-align: justify;
+}
+
+main.div.img {
+    width: 40px;
+    height: 40px
 }

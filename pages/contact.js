@@ -7,10 +7,15 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import bootstrap navbar from react-bootstrap
 import { Navbar, Nav, Container } from 'react-bootstrap';
+// import social media icons from react-bootstrap
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
 // import local css
-import styles from '../styles/Landing.module.css';
+import styles from '../styles/Contact.module.css';
+// import extra css
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-export default function Landing() {
+export default function Contact() {
     return (
         <div>
             <Head>
@@ -32,16 +37,16 @@ export default function Landing() {
             </Navbar>
 
             <main className={styles.main}>
-                {/*  Add an image to the left and a heading and paragraph to the right */}
-                <div className={styles.left}>
-                    <img src="/dog.jpg" alt="landing" className={styles.landing_img} />
-                </div>
-                <div className={styles.right}>
-                    <h3>Welcome to my portfolio!</h3>
-                    <p className={styles.description}>
-                        I'm a current <a href="https://www.ucla.edu/" target="_blank">UCLA</a> undergraduate student that will be graduating in 2024 with a degree in Psychobiology B.S..
-                        In my freetime, I love to play basketball, DJ music, and cook homemade meals.
-                    </p>
+                {/* Add an unordered list of contacts from social media websites with links to their respective pages */}
+                <div className={styles.listofcontacts}>
+                    <ul>
+                        <li>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#0082ca' }} href='#'>
+                                <MDBIcon fab icon='linkedin-in' />
+                            </MDBBtn>
+                            <a href="https://www.linkedin.com/in/matthew-hy-1a24720b1" target="_blank">Matthew (LinkedIn)</a>
+                        </li>
+                    </ul>
                 </div>
             </main>
 
