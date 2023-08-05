@@ -1,0 +1,12 @@
+[
+    {
+        "name": "React Portfolio",
+        "url": "https://github.com/indoctrinatedrecluse/portfolio-react-nextjs",
+        "description": "My portfolio website built with React and Next.js."
+    },
+    {
+        "name": "LinkedIn Profile",
+        "url": "https://www.linkedin.com/in/matthew-hy-1a24720b1",
+        "description": "My LinkedIn profile."
+    }
+]

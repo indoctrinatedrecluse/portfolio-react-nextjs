@@ -1,0 +1,15 @@
+.main {
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+    height: max-content;
+    text-align: center;
+    align-items: center;
+}
+
+/* Put the carousel in the center of the main div */
+#projectsCarousel {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
