@@ -7,6 +7,8 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import bootstrap navbar from react-bootstrap
 import { Navbar, Nav, Container } from 'react-bootstrap';
+// import social media icons from react-social-icons
+import { SocialIcon } from 'react-social-icons';
 // import local css
 import styles from '../styles/About.module.css';
 import Script from 'next/script';
@@ -59,14 +61,13 @@ export default function About() {
 
             {/* Use a bootstrap5 sticky footer */}
             <footer className={styles.footer}>
-                <Navbar bg="dark" variant="dark" fixed="bottom">
+                <Navbar bg="light" variant="light" fixed="bottom">
                     <Container>
                         <Navbar.Brand href="/landing">Portfolio</Navbar.Brand>
-                        <Nav className="me-auto">
-                            <Nav.Link href="/landing">Home</Nav.Link>
-                            <Nav.Link href="/about">About</Nav.Link>
-                            <Nav.Link href="/projects">Projects</Nav.Link>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
+                        <Nav className="ms-auto">
+                            <SocialIcon className={styles.icon_margin} url="https://github.com/matth1gh" />
+                            <SocialIcon className={styles.icon_margin} url="matthew.hy02@gmail.com" />
+                            <SocialIcon className={styles.icon_margin} url="https://www.linkedin.com/in/matthew-hy-1a24720b1/" />
                         </Nav>
                     </Container>
                 </Navbar>

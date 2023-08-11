@@ -1,10 +1,11 @@
 .main {
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #f5f5f5;
+    margin-top: 5rem;
+    width: view-width;
     text-align: center;
     align-items: center;
     display: flex;
 }
 
+.icon_margin {
+    margin-right: 10px;
+}
