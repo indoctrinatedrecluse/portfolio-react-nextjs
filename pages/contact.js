@@ -14,20 +14,20 @@ import styles from '../styles/Contact.module.css';
 // import contact form
 import ContactForm from '../components/contact_form';
 
-export default function Landing() {
+export default function Contact() {
     return (
         <div>
             <Head>
-                <title>Portfolio | Landing</title>
+                <title>Portfolio | Contact</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
 
             {/* Use a bootstrap5 sticky navbar */}
             <Navbar bg="dark" variant="dark" fixed="top">
                 <Container>
-                    <Navbar.Brand href="/landing">Portfolio</Navbar.Brand>
+                    <Navbar.Brand href="/">Portfolio</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="/landing">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
                         <Nav.Link href="/projects">Projects</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>

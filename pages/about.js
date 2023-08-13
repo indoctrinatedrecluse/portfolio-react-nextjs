@@ -24,9 +24,9 @@ export default function About() {
             {/* Use a bootstrap5 sticky navbar */}
             <Navbar bg="dark" variant="dark" fixed="top">
                 <Container>
-                    <Navbar.Brand href="/landing">Portfolio</Navbar.Brand>
+                    <Navbar.Brand href="/">Portfolio</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="/landing">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
                         <Nav.Link href="/projects">Projects</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>

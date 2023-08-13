@@ -1,115 +1,65 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css';
+// Create a landing page for the website which contains a global navbar and footer, both sticky.
+
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+// import bootstrap css
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import bootstrap navbar from react-bootstrap
+import { Navbar, Nav, Container } from 'react-bootstrap';
+// import social media icons from react-social-icons
+import { SocialIcon } from 'react-social-icons';
+// import local css
+import styles from '../styles/Landing.module.css';
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div>
+            <Head>
+                <title>Portfolio | Landing</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+            {/* Use a bootstrap5 sticky navbar */}
+            <Navbar bg="dark" variant="dark" fixed="top">
+                <Container>
+                    <Navbar.Brand href="/">Portfolio</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="/projects">Projects</Nav.Link>
+                        <Nav.Link href="/contact">Contact</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            <main className={styles.main}>
+                {/*  Add an image to the left and a heading and paragraph to the right */}
+                <div className={styles.left}>
+                    <img src="/images/dog.jpg" alt="landing" className={styles.landing_img} />
+                </div>
+                <div className={styles.right}>
+                    <h3>Welcome to my portfolio!</h3>
+                    <p className={styles.description}>
+                        I'm a current <a href="https://www.ucla.edu/" target="_blank">UCLA</a> undergraduate student that will be graduating in 2024 with a degree in Psychobiology B.S..
+                        I am also interested in computer science and have taken a few courses in the subject.
+                    </p>
+                </div>
+            </main>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            {/* Use a bootstrap5 sticky footer */}
+            <footer className={styles.footer}>
+                <Navbar bg="light" variant="light" fixed="bottom">
+                    <Container>
+                        <Navbar.Brand href="/landing">Portfolio</Navbar.Brand>
+                        <Nav className="ms-auto">
+                            <SocialIcon className={styles.icon_margin} url="https://github.com/matth1gh" />
+                            <SocialIcon className={styles.icon_margin} url="matthew.hy02@gmail.com" />
+                            <SocialIcon className={styles.icon_margin} url="https://www.linkedin.com/in/matthew-hy-1a24720b1/" />
+                        </Nav>
+                    </Container>
+                </Navbar>
+            </footer>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+    )
 }

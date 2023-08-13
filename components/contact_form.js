@@ -13,7 +13,15 @@ const ContactForm = () => {
     }
     console.log(conFom);
 
-    // TODO: Send Email or Store in DB
+    // Store this in a Blob and prompt user to download it as txt file
+    const file = new Blob([JSON.stringify(conFom)], { type: 'text/plain' });
+    const element = document.createElement("a");
+    element.href = URL.createObjectURL(file);
+    element.download = "contact_form.txt";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+    // remove the element when done
+    document.body.removeChild(element);
 
     setTimeout(() => {
         setFormStatus('Submitted')
