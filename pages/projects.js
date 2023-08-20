@@ -49,7 +49,7 @@ export default function About() {
                         <img src="/images/project1.jpg" alt="Project 1" />
                         <Carousel.Caption>
                             <h3 className={styles.item_header}>Portfolio website</h3>
-                            <Button href="/landing" variant="dark">View</Button>
+                            <Button href="/" variant="dark" target='_blank'>View</Button>
                             <p className={styles.item_description}>Written in React NextJS using Bootstrap 5+</p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -57,7 +57,7 @@ export default function About() {
                         <img src="/images/project2.jpg" alt="Project 1" />
                         <Carousel.Caption>
                             <h3 className={styles.item_header}>Java Samples</h3>
-                            <Button href="https://github.com/indoctrinatedrecluse/java_tutoring_lessons" variant="light">View</Button>
+                            <Button href="https://github.com/indoctrinatedrecluse/java_tutoring_lessons" variant="light" target='_blank'>View</Button>
                             <p className={styles.item_description}>Snippets in Core Java for teaching</p>
                         </Carousel.Caption>
                     </Carousel.Item>

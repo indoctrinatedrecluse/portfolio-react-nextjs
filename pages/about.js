@@ -53,7 +53,7 @@ export default function About() {
                             <h5 className="card-title">UCLA</h5>
                             <h6 className="card-subtitle mb-2 text-muted">Bachelor of Science in Psychobiology</h6>
                             <p className="card-text">I am currently a fourth year student at UCLA, pursuing a Bachelor of Science in Psychobiology. I am also pursuing a minor in Film, Television, and Digital Media.</p>
-                            <a href="#" className="card-link">UCLA Psychology</a>
+                            <a href="https://www.psych.ucla.edu/" className="card-link" target='_blank'>UCLA Psychology</a>
                         </div>
                     </div>
                 </div>
